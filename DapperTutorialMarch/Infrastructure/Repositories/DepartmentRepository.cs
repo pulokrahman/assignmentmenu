@@ -57,7 +57,7 @@ namespace Infrastructure.Repositories
         {
             using (IDbConnection conn = _dbContext.GetConnection())
             {
-                return conn.Execute("Update Departments set DeptNAme = @DeptName, Location = @Location Where Id = @Id)", obj);
+                return conn.Execute("Update Departments set DeptName = @DeptName, Location = @Location Where Id = @Id", obj);
             }
         }
     }
